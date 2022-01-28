@@ -23,4 +23,14 @@ public class Pl_Move : MonoBehaviour
             rb.AddForce(new Vector3(1, 0, 0));
         }
     }
+
+    void MoveLeft()
+    {
+        rb.AddForce(new Vector3(-1, 0, 0));
+    }
+
+    void MoveRight()
+    {
+        rb.AddForce(new Vector3(1, 0, 0));
+    }
 }

@@ -959,9 +959,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1976132365}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 69e9adb4c37fb7740a732532762688eb, type: 3}
+  m_Script: {fileID: 11500000, guid: 0eb3961153c88a4458e47e3a519b4304, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  LookRight: 1
+  Handstand: 0
+  speedNow: {x: 0, y: 0, z: 0}
+  AirNum: 3
 --- !u!1 &2064370566
 GameObject:
   m_ObjectHideFlags: 0
