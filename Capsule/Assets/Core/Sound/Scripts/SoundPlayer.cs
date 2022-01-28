@@ -21,6 +21,11 @@ public class SoundPlayer:MonoBehaviour, ISoundPlayer
         }
     }
 
+    public void StopBGMAll()
+    {
+        bgmSource.Stop();
+    }
+
     public void PlaySE(SeType type)
     {
         var clip = _soundDataList.GetSeAudioClip(type);

@@ -1,4 +1,4 @@
-using Core.Sound;
+using Core.Global;
 using Sound;
 using UniRx;
 using UnityEngine;
@@ -7,16 +7,13 @@ using UnityEngine.UI;
 public class NewBehaviourScript : MonoBehaviour
 {
     [SerializeField] private Button seButton;
+
+    [SerializeField] private SoundPlayer _soundPlayer;
     // Start is called before the first frame update
     void Start()
     {
-        GlobalSoundPlayer.PlayBGM(BgmType.Title);
-        seButton.OnClickAsObservable().Subscribe(x => GlobalSoundPlayer.PlaySE(SeType.OK)).AddTo(this);
+        _soundPlayer.PlayBGM(BgmType.Title);
+        seButton.OnClickAsObservable().Subscribe(x => _soundPlayer.PlaySE(SeType.OK)).AddTo(this);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
