@@ -1,3 +1,4 @@
+using Core.Sound;
 using Sound;
 using UniRx;
 using UnityEngine;

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Core.Sound;
 using UnityEngine;
 
 public class GlobalSoundPlayerSetup : MonoBehaviour
