@@ -5,6 +5,7 @@ using UnityEngine;
 public class inWarterSwitch : MonoBehaviour
 {
     public Playercontrol player;
+    public bool inwater;
     public float flowStartTime;
     public float Time;
 
@@ -17,6 +18,10 @@ public class inWarterSwitch : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(inwater==true)
+        {
+            Time -= 1;
+        }
         if(Time<=0)
         {
             player.inWater = true;
@@ -27,7 +32,7 @@ public class inWarterSwitch : MonoBehaviour
     {
         if(collision.gameObject.tag=="Water")
         {
-            Time -= 1;
+            inwater = true;
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
@@ -35,7 +40,12 @@ public class inWarterSwitch : MonoBehaviour
         if (collision.gameObject.tag == "Water")
         {
             player.inWater = false;
+            inwater = false;
             Time = flowStartTime * 50;
+            if(player.gameObject.GetComponent<Rigidbody2D>().velocity.y>=5)
+            {
+                player.gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(0f, 4f);
+            }
         }
     }
 }
