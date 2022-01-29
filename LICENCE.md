@@ -2,6 +2,20 @@
 
 Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)
 
+# Using Resource
+## OtoLogic
+https://otologic.jp/
+## 魔王魂
+https://maou.audio/
+## GoogleFont
+https://fonts.google.com/
+SIL Open Font License
+
+# Reference
+
+## SceneObject.cs
+https://gist.github.com/Hertzole/ac269f3148bc5192cc2eb6d472870d24
+
 # Packages
 
 
