@@ -12,6 +12,15 @@ public class Playercontrol : MonoBehaviour
     public bool mascle;
     //プレイヤーの移動速度
     public float speed;
+    //マッチョの時のジャンプ力
+    public float mukiKapoeraJumpForce;
+    //ガリガリ時の潜水力
+    public float gariKapoeraDiveForce;
+
+    //水に入ってるかどうかの判定
+    public bool inWater;
+    //水の浮力
+    public float inWaterForce;
 
     //攻撃系コライダオブジェクト
     public GameObject gariPunchHand;
@@ -30,6 +39,8 @@ public class Playercontrol : MonoBehaviour
     public float kapoeraInitTime;
     public float kapoeraTime;
 
+    Rigidbody2D rigid;
+
 
     // Start is called before the first frame update
     void Start()
@@ -37,6 +48,7 @@ public class Playercontrol : MonoBehaviour
         //初期化設定
         handStand = false;
         airGage = 0;
+        rigid = this.gameObject.GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
@@ -80,7 +92,12 @@ public class Playercontrol : MonoBehaviour
                 this.gameObject.transform.Translate(speed, 0, 0);
         }
 
-        
+        if(inWater==true)
+        {
+            rigid.AddForce(new Vector2(0, inWaterForce),ForceMode2D.Force);
+        }
+
+
         if(Input.GetMouseButtonDown(1))
         {
             if(handStand==true)
@@ -102,11 +119,16 @@ public class Playercontrol : MonoBehaviour
                 {
                     mukiKapoeraKick.SetActive(true);
                     kapoeraTime = kapoeraInitTime*50;
+                    rigid.AddForce(new Vector2(0, mukiKapoeraJumpForce),ForceMode2D.Impulse);
                 }
                 else
                 {
                     gariKapoeraKick.SetActive(true);
                     kapoeraTime = kapoeraInitTime * 50;
+                    if(inWater==true)
+                    {
+                        rigid.AddForce(new Vector2(0, -gariKapoeraDiveForce), ForceMode2D.Impulse);
+                    }
                 }                
             }
             else
@@ -115,11 +137,13 @@ public class Playercontrol : MonoBehaviour
                 {
                     mukiPunchHand.SetActive(true);
                     punchTime = punchInitTime * 50;
+                    
                 }
                 else
                 {
                     gariPunchHand.SetActive(true);
-                    punchTime = punchInitTime * 50;                }
+                    punchTime = punchInitTime * 50;
+                }
             }
             
         }
