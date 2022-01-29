@@ -72,6 +72,10 @@ MonoBehaviour:
     audioClip: {fileID: 8300000, guid: 5352beaab6038ea4bb872f90e1669c48, type: 3}
   - seType: 15
     audioClip: {fileID: 8300000, guid: 2a5d6e24fee13934a8ef39041100d4d0, type: 3}
+  - seType: 6
+    audioClip: {fileID: 8300000, guid: fcb34a12da3e92c4aa1c570e3077593d, type: 3}
+  - seType: 7
+    audioClip: {fileID: 8300000, guid: 2419ac6af32a9934ca66563ca2b7caec, type: 3}
 --- !u!1 &8420173913720656643
 GameObject:
   m_ObjectHideFlags: 0
