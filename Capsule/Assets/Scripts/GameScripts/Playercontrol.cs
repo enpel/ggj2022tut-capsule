@@ -25,6 +25,8 @@ public class Playercontrol : MonoBehaviour
     //右向き左向き判定
     public bool rightFront;
 
+    //スプライトオブジェクト
+    public GameObject charaSprite;
     //
     public float punchForce;
 
@@ -51,6 +53,10 @@ public class Playercontrol : MonoBehaviour
 
     Rigidbody2D rigid;
 
+    CapsuleCollider2D colmanage;
+
+    public bool Move;
+    public bool Action;
 
     // Start is called before the first frame update
     void Start()
@@ -60,50 +66,79 @@ public class Playercontrol : MonoBehaviour
         airGage = 0;
         rigid = this.gameObject.GetComponent<Rigidbody2D>();
         rightFront = true;
+        colmanage = gameObject.GetComponent<CapsuleCollider2D>();
     }
 
     // Update is called once per frame
     void Update()
     {
-       //ガリ・ムキ判定
-       if(airGage>=1)
-       {
+        //ガリ・ムキ判定
+        if(airGage>=1)
+        {
             mascle = true;
-       }
-       if(airGage<=0)
+        }
+        if(airGage<=0)
         {
             airGage = 0;
             mascle = false;
         }
-       //逆立ちになった時
+
+        //カプセルコライダ調整
+        if(mascle==true)
+        {
+            colmanage.size=new Vector2(1f, 2f);
+        }
+        else
+        {
+            colmanage.size = new Vector2(0.22f, 2f);
+        }
+
+        //右向きと左向きでサイズを変更
+        if(rightFront==true)
+        {
+            charaSprite.transform.localScale=new Vector3(0.1f,0.1f,0.1f);
+        }
+        else
+        {
+            charaSprite.transform.localScale = new Vector3(-0.1f, 0.1f, 0.1f);
+        }
+        //逆立ちになった時
+        /*
         if(handStand==true)
         {
             //逆立ち状態になる(仮)
-            this.gameObject.transform.eulerAngles = new Vector3(0, 0, 180);
+            //this.gameObject.transform.eulerAngles = new Vector3(0, 0, 180);
         }
         else
         {
             //普通に立つ（仮）
-            this.gameObject.transform.eulerAngles = new Vector3(0, 0, 0);
-        }
+            //this.gameObject.transform.eulerAngles = new Vector3(0, 0, 0);
+        }*/
 
         //Move処理
         if(Input.GetKey(rightMoveKey))
         {
+            Move = true;
             rightFront = true;
-            if(handStand==false)
+           // if(handStand==false)
                 this.gameObject.transform.position += transform.right * speed * Time.deltaTime;
-            if (handStand == true)
-                this.gameObject.transform.position -= transform.right * speed * Time.deltaTime;
+           // if (handStand == true)
+                //this.gameObject.transform.position -= transform.right * speed * Time.deltaTime;
         }
         else if (Input.GetKey(leftMoveKey))
         {
+            Move = true;
             rightFront = false;
-            if (handStand == false)
+            //if (handStand == false)
                 this.gameObject.transform.position -= transform.right * speed * Time.deltaTime;
-            if (handStand == true)
-                this.gameObject.transform.position += transform.right * speed * Time.deltaTime;
+            //if (handStand == true)
+                //this.gameObject.transform.position += transform.right * speed * Time.deltaTime;
         }
+        else
+        {
+            Move = false;
+        }
+  
 
         if(inWater==true)
         {
@@ -126,6 +161,7 @@ public class Playercontrol : MonoBehaviour
         if(Input.GetMouseButtonDown(0))
         {
             airGage -= 1;
+            Action = true;
             if (handStand == true)
             {
                 if (mascle == true)
@@ -183,6 +219,7 @@ public class Playercontrol : MonoBehaviour
                 mukiKapoeraKick.SetActive(false);
                 gariKapoeraKick.SetActive(false);
                 kapoeraTime = 0;
+                Action = false;
             }
             if(punchTime<=0)
             {
@@ -192,6 +229,7 @@ public class Playercontrol : MonoBehaviour
                 gariPunchHandR.SetActive(false);
                 punchTime = 0;
                 rigid.velocity=new Vector2(0, 0);
+                Action = false;
             }
         }
 
