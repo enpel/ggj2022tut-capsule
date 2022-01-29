@@ -2,7 +2,7 @@ Shader "Unlit/UVScroll"
 {
     Properties
     {
-        _MainTex ("Texture", 2D) = "white" {}
+        _MainTex1 ("Texture", 2D) = "white" {}
     }
     SubShader
     {
