@@ -12,6 +12,13 @@ public class Playercontrol : MonoBehaviour
     public bool mascle;
     //プレイヤーの移動速度
     public float speed;
+    //マッチョの時のジャンプ力
+    public float mukiKapoeraJumpForce;
+    //ガリガリ時の潜水力
+    public float gariKapoeraDiveForce;
+
+    //水に入ってるかどうかの判定
+    public bool inWarter;
 
     //攻撃系コライダオブジェクト
     public GameObject gariPunchHand;
@@ -30,6 +37,8 @@ public class Playercontrol : MonoBehaviour
     public float kapoeraInitTime;
     public float kapoeraTime;
 
+    Rigidbody2D rigid;
+
 
     // Start is called before the first frame update
     void Start()
@@ -37,6 +46,7 @@ public class Playercontrol : MonoBehaviour
         //初期化設定
         handStand = false;
         airGage = 0;
+        rigid = this.gameObject.GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
@@ -115,11 +125,13 @@ public class Playercontrol : MonoBehaviour
                 {
                     mukiPunchHand.SetActive(true);
                     punchTime = punchInitTime * 50;
+                    
                 }
                 else
                 {
                     gariPunchHand.SetActive(true);
-                    punchTime = punchInitTime * 50;                }
+                    punchTime = punchInitTime * 50;
+                }
             }
             
         }
