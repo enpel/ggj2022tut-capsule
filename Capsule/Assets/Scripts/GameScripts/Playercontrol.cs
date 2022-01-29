@@ -86,11 +86,13 @@ public class Playercontrol : MonoBehaviour
         //カプセルコライダ調整
         if(mascle==true)
         {
-            colmanage.size=new Vector2(1f, 2f);
+            colmanage.offset = new Vector2(0f, -0.2f);
+            colmanage.size=new Vector2(1f, 1.56f);
         }
         else
         {
-            colmanage.size = new Vector2(0.22f, 2f);
+            colmanage.offset = new Vector2(0f, -0.2f);
+            colmanage.size = new Vector2(0.22f, 1.56f);
         }
 
         //右向きと左向きでサイズを変更
