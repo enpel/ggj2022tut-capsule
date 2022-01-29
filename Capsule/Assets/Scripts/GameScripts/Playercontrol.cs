@@ -22,15 +22,25 @@ public class Playercontrol : MonoBehaviour
     //水の浮力
     public float inWaterForce;
 
+    //右向き左向き判定
+    public bool rightFront;
+
+    //
+    public float punchForce;
+
     //攻撃系コライダオブジェクト
-    public GameObject gariPunchHand;
-    public GameObject mukiPunchHand;
+    public GameObject gariPunchHandL;
+    public GameObject mukiPunchHandL;
+    public GameObject gariPunchHandR;
+    public GameObject mukiPunchHandR;
     public GameObject gariKapoeraKick;
     public GameObject mukiKapoeraKick;
 
 
     public KeyCode leftMoveKey;
     public KeyCode rightMoveKey;
+
+    
 
 
     //攻撃コライダ出現時間
@@ -49,6 +59,7 @@ public class Playercontrol : MonoBehaviour
         handStand = false;
         airGage = 0;
         rigid = this.gameObject.GetComponent<Rigidbody2D>();
+        rightFront = true;
     }
 
     // Update is called once per frame
@@ -79,17 +90,19 @@ public class Playercontrol : MonoBehaviour
         //Move処理
         if(Input.GetKey(rightMoveKey))
         {
+            rightFront = true;
             if(handStand==false)
-                this.gameObject.transform.Translate(speed, 0, 0);
+                this.gameObject.transform.position += transform.right * speed * Time.deltaTime;
             if (handStand == true)
-                this.gameObject.transform.Translate(-speed, 0, 0);
+                this.gameObject.transform.position -= transform.right * speed * Time.deltaTime;
         }
         else if (Input.GetKey(leftMoveKey))
         {
-            if(handStand==false)
-                this.gameObject.transform.Translate(-speed, 0, 0);
+            rightFront = false;
+            if (handStand == false)
+                this.gameObject.transform.position -= transform.right * speed * Time.deltaTime;
             if (handStand == true)
-                this.gameObject.transform.Translate(speed, 0, 0);
+                this.gameObject.transform.position += transform.right * speed * Time.deltaTime;
         }
 
         if(inWater==true)
@@ -113,35 +126,51 @@ public class Playercontrol : MonoBehaviour
         if(Input.GetMouseButtonDown(0))
         {
             airGage -= 1;
-            if(handStand==true)
+            if (handStand == true)
             {
                 if (mascle == true)
                 {
                     mukiKapoeraKick.SetActive(true);
-                    kapoeraTime = kapoeraInitTime*50;
-                    rigid.AddForce(new Vector2(0, mukiKapoeraJumpForce),ForceMode2D.Impulse);
+                    kapoeraTime = kapoeraInitTime * 50;
+                    rigid.AddForce(new Vector2(0, mukiKapoeraJumpForce), ForceMode2D.Impulse);
                 }
                 else
                 {
                     gariKapoeraKick.SetActive(true);
                     kapoeraTime = kapoeraInitTime * 50;
-                    if(inWater==true)
+                    if (inWater == true)
                     {
                         rigid.AddForce(new Vector2(0, -gariKapoeraDiveForce), ForceMode2D.Impulse);
                     }
-                }                
+                }
             }
             else
             {
                 if (mascle == true)
                 {
-                    mukiPunchHand.SetActive(true);
+                    if (rightFront == true)
+                    {
+                        mukiPunchHandR.SetActive(true);
+                        rigid.AddForce(new Vector2(punchForce, 0), ForceMode2D.Impulse);
+                    }
+                    else
+                    {
+                        mukiPunchHandL.SetActive(true);
+                        rigid.AddForce(new Vector2(-punchForce, 0), ForceMode2D.Impulse);
+                    }
                     punchTime = punchInitTime * 50;
-                    
+
                 }
                 else
                 {
-                    gariPunchHand.SetActive(true);
+                    if (rightFront == true)
+                    {
+                        gariPunchHandR.SetActive(true);
+                    }
+                    else
+                    {
+                        gariPunchHandL.SetActive(true);
+                    }
                     punchTime = punchInitTime * 50;
                 }
             }
@@ -157,9 +186,12 @@ public class Playercontrol : MonoBehaviour
             }
             if(punchTime<=0)
             {
-                mukiPunchHand.SetActive(false);
-                gariPunchHand.SetActive(false);
+                mukiPunchHandL.SetActive(false);
+                gariPunchHandL.SetActive(false);
+                mukiPunchHandR.SetActive(false);
+                gariPunchHandR.SetActive(false);
                 punchTime = 0;
+                rigid.velocity=new Vector2(0, 0);
             }
         }
 
