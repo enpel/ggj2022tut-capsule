@@ -18,7 +18,9 @@ public class Playercontrol : MonoBehaviour
     public float gariKapoeraDiveForce;
 
     //水に入ってるかどうかの判定
-    public bool inWarter;
+    public bool inWater;
+    //水の浮力
+    public float inWaterForce;
 
     //攻撃系コライダオブジェクト
     public GameObject gariPunchHand;
@@ -90,7 +92,12 @@ public class Playercontrol : MonoBehaviour
                 this.gameObject.transform.Translate(speed, 0, 0);
         }
 
-        
+        if(inWater==true)
+        {
+            rigid.AddForce(new Vector2(0, inWaterForce),ForceMode2D.Force);
+        }
+
+
         if(Input.GetMouseButtonDown(1))
         {
             if(handStand==true)
@@ -112,11 +119,16 @@ public class Playercontrol : MonoBehaviour
                 {
                     mukiKapoeraKick.SetActive(true);
                     kapoeraTime = kapoeraInitTime*50;
+                    rigid.AddForce(new Vector2(0, mukiKapoeraJumpForce),ForceMode2D.Impulse);
                 }
                 else
                 {
                     gariKapoeraKick.SetActive(true);
                     kapoeraTime = kapoeraInitTime * 50;
+                    if(inWater==true)
+                    {
+                        rigid.AddForce(new Vector2(0, -gariKapoeraDiveForce), ForceMode2D.Impulse);
+                    }
                 }                
             }
             else
