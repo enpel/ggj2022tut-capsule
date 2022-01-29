@@ -326,7 +326,7 @@ MonoBehaviour:
   airGage: 0
   mascle: 0
   speed: 5
-  mukiKapoeraJumpForce: 70
+  mukiKapoeraJumpForce: 100
   gariKapoeraDiveForce: 40.23
   inWater: 0
   inWaterForce: 100
