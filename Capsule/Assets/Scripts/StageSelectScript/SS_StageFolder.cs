@@ -6,6 +6,7 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using TMPro;
 using ScriptableObject;
+using Sound;
 
 public class SS_StageFolder : MonoBehaviour
 {
@@ -60,6 +61,9 @@ public class SS_StageFolder : MonoBehaviour
 
         StageNumBefore = StageNumNow;
         StageNumLimit = SD.Length;
+        
+        
+        Global.SoundPlayer.PlayBGM(BgmType.StageSelect);
     }
 
     void Update()

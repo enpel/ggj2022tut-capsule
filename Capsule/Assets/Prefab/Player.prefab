@@ -325,11 +325,11 @@ MonoBehaviour:
   handStand: 0
   airGage: 0
   mascle: 0
-  speed: 2.05
-  mukiKapoeraJumpForce: 30
-  gariKapoeraDiveForce: 11.58
+  speed: 5
+  mukiKapoeraJumpForce: 70
+  gariKapoeraDiveForce: 40.23
   inWater: 0
-  inWaterForce: 21.28
+  inWaterForce: 100
   rightFront: 0
   charaSprite: {fileID: 5027049127448638217}
   punchForce: 22.21
@@ -361,6 +361,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gariSprite: {fileID: 5027049127448638217}
   mukiSprite: {fileID: 5027049128710149113}
+  nowCharaSprite: {fileID: 0}
   gariAnimator: {fileID: 0}
   mukiAnimator: {fileID: 0}
   nowAnimator: {fileID: 0}
@@ -379,6 +380,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 4766045715635044720}
+  flowStartTime: 3
+  Time: 0
 --- !u!50 &4766045715635044723
 Rigidbody2D:
   serializedVersion: 4
@@ -391,10 +394,10 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 0.36
+  m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 5.3
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1

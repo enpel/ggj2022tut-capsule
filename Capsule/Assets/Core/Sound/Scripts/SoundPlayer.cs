@@ -20,8 +20,9 @@ public class SoundPlayer:MonoBehaviour, ISoundPlayer
         {
             var clip = _soundDataList.GetBgmAudioClip(type); 
             if (clip == null) return;
-            
-            bgmSource.PlayOneShot(clip);
+
+            bgmSource.clip = clip;
+            bgmSource.Play();
         }
     }
 
