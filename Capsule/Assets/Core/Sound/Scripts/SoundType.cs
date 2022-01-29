@@ -33,5 +33,6 @@ namespace Sound
         AirBlow,
         JingleGoal,
         JingleDead,
+        Select,
     }
 }

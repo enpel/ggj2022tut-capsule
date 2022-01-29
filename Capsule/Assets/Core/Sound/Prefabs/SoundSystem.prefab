@@ -48,9 +48,9 @@ MonoBehaviour:
   - bgmType: 0
     audioClip: {fileID: 8300000, guid: 53070a8e34bb16f499f344ec7ba426a1, type: 3}
   - bgmType: 1
-    audioClip: {fileID: 8300000, guid: 5f34e3c543c82474cb36c9cbe63d7add, type: 3}
+    audioClip: {fileID: 8300000, guid: c52be5fd75b470440b62f3d3dd3f9790, type: 3}
   - bgmType: 2
-    audioClip: {fileID: 8300000, guid: 5f34e3c543c82474cb36c9cbe63d7add, type: 3}
+    audioClip: {fileID: 8300000, guid: c52be5fd75b470440b62f3d3dd3f9790, type: 3}
   - bgmType: 3
     audioClip: {fileID: 8300000, guid: 5f34e3c543c82474cb36c9cbe63d7add, type: 3}
   seData:
@@ -68,6 +68,8 @@ MonoBehaviour:
     audioClip: {fileID: 8300000, guid: 621fc665f1933e5458d236212268f792, type: 3}
   - seType: 3
     audioClip: {fileID: 8300000, guid: 5352beaab6038ea4bb872f90e1669c48, type: 3}
+  - seType: 15
+    audioClip: {fileID: 8300000, guid: 2a5d6e24fee13934a8ef39041100d4d0, type: 3}
 --- !u!1 &8420173913720656643
 GameObject:
   m_ObjectHideFlags: 0
@@ -275,7 +277,7 @@ AudioSource:
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
