@@ -1,3 +1,19 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:1a8ecda0d2db8e35ddc82e26cef53fb31c4177cb2f31b93444e9f6806672c066
-size 673
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/SampleScene.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/Title.unity
+    guid: e980becdc260d794b98b99d2d55ccf43
+  - enabled: 1
+    path: Assets/Scenes/StageSelect.unity
+    guid: d6d698bbe3d2fe34294f0a9a3521a9ed
+  m_configObjects:
+    com.unity.addressableassets: {fileID: 11400000, guid: 7c133e52a40369f4eb2f5bf6f60f38be, type: 2}
+    com.unity.localization.settings: {fileID: 11400000, guid: 979110c394ff9ea419351967a737d715, type: 2}
