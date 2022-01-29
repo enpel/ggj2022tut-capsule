@@ -1,9 +1,14 @@
+using Test;
+using UnityEngine;
 using VContainer;
 using VContainer.Unity;
 
-public class ProjectRootLifetimeScope : LifetimeScope
+namespace Core.GariMukiAir
 {
-    protected override void Configure(IContainerBuilder builder)
+    public class ProjectRootLifetimeScope : LifetimeScope
     {
+        protected override void Configure(IContainerBuilder builder)
+        {
+        }
     }
 }
