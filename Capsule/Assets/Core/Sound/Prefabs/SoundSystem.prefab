@@ -46,6 +46,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bgmData:
   - bgmType: 0
+    audioClip: {fileID: 8300000, guid: 53070a8e34bb16f499f344ec7ba426a1, type: 3}
+  - bgmType: 1
+    audioClip: {fileID: 8300000, guid: 5f34e3c543c82474cb36c9cbe63d7add, type: 3}
+  - bgmType: 2
+    audioClip: {fileID: 8300000, guid: 5f34e3c543c82474cb36c9cbe63d7add, type: 3}
+  - bgmType: 3
     audioClip: {fileID: 8300000, guid: 5f34e3c543c82474cb36c9cbe63d7add, type: 3}
   seData:
   - seType: 0
@@ -400,3 +406,4 @@ MonoBehaviour:
   _soundDataList: {fileID: 5138491369952429553}
   bgmSource: {fileID: 8420173914959156647}
   seSource: {fileID: 8420173913720656645}
+  _audioMixer: {fileID: 24100000, guid: 51bdf20a373426a4b8da7b5866168270, type: 2}
