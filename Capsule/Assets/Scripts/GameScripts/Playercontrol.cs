@@ -38,12 +38,8 @@ public class Playercontrol : MonoBehaviour
     public GameObject gariKapoeraKick;
     public GameObject mukiKapoeraKick;
 
-
     public KeyCode leftMoveKey;
     public KeyCode rightMoveKey;
-
-    
-
 
     //攻撃コライダ出現時間
     public float punchInitTime;
@@ -95,28 +91,6 @@ public class Playercontrol : MonoBehaviour
             colmanage.size = new Vector2(0.22f, 1.56f);
         }
 
-        //右向きと左向きでサイズを変更
-        if(rightFront==true)
-        {
-            charaSprite.transform.localScale=new Vector3(0.1f,0.1f,0.1f);
-        }
-        else
-        {
-            charaSprite.transform.localScale = new Vector3(-0.1f, 0.1f, 0.1f);
-        }
-        //逆立ちになった時
-        /*
-        if(handStand==true)
-        {
-            //逆立ち状態になる(仮)
-            //this.gameObject.transform.eulerAngles = new Vector3(0, 0, 180);
-        }
-        else
-        {
-            //普通に立つ（仮）
-            //this.gameObject.transform.eulerAngles = new Vector3(0, 0, 0);
-        }*/
-
         //Move処理
         if(Input.GetKey(rightMoveKey))
         {
@@ -144,7 +118,7 @@ public class Playercontrol : MonoBehaviour
 
         if(inWater==true)
         {
-            rigid.AddForce(new Vector2(0, inWaterForce),ForceMode2D.Force);
+            rigid.AddForce(new Vector2(0, inWaterForce));
         }
 
 
