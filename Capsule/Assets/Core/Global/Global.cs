@@ -1,7 +1,7 @@
 using Core.Effect.Scripts;
 using Core.Sound;
+using Core.UserData;
 using ScriptableObject;
-using UnityEngine;
 
 namespace Core.Global
 {
@@ -16,16 +16,16 @@ namespace Core.Global
 
         public static IEffectPlayer EffectPlayer => _effectPlayer;
         
-        
-        static private ISoundPlayer _soundPlayer;
+        private static ISoundPlayer _soundPlayer;
         public static void SetSoundPlayer(ISoundPlayer soundPlayer)
         {
             _soundPlayer = soundPlayer;
         }
         
         public static ISoundPlayer SoundPlayer => _soundPlayer;
-
-        static public StageData CurrentStageData { get; set; }
+        public static StageData CurrentStageData { get; set; }
+        
+        public static SaveDataSystem SaveDataSystem { get; set; }
 
     }
 }
