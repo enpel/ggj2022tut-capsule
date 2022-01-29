@@ -212,7 +212,7 @@ public class Playercontrol : MonoBehaviour
                     mukiPunchHandR.SetActive(false);
                     gariPunchHandR.SetActive(false);
                     punchTime = 0;
-                    rigid.velocity = new Vector2(0, 0);
+                    rigid.velocity = new Vector2(0, rigid.velocity.y);
                     Action = false;
                 }
             }
