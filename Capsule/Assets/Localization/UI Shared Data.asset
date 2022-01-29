@@ -27,6 +27,22 @@ MonoBehaviour:
     m_Key: Credit
     m_Metadata:
       m_Items: []
+  - m_Id: 69725859258368
+    m_Key: Option
+    m_Metadata:
+      m_Items: []
+  - m_Id: 71461265121280
+    m_Key: HideCredit
+    m_Metadata:
+      m_Items: []
+  - m_Id: 73737266438144
+    m_Key: Volume
+    m_Metadata:
+      m_Items: []
+  - m_Id: 74613985026048
+    m_Key: Resolution
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
