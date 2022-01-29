@@ -7,6 +7,6 @@ public class StartButton : MonoBehaviour
 {
     public void ClickButton()
     {
-        SceneManager.LoadScene("DummyStageSelect");
+        SceneManager.LoadScene("StageSelect");
     }
 }

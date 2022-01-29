@@ -12,8 +12,8 @@ EditorBuildSettings:
     path: Assets/Scenes/Title.unity
     guid: e980becdc260d794b98b99d2d55ccf43
   - enabled: 1
-    path: Assets/Scenes/Test/DummyStageSelect.unity
-    guid: b7e13dee70713404cabfe87bfe11258b
+    path: Assets/Scenes/StageSelect.unity
+    guid: d6d698bbe3d2fe34294f0a9a3521a9ed
   - enabled: 1
     path: Assets/Scripts/DummyPlay/DummyPlay.unity
     guid: 27764d7cfd56e3042b4afdf8b8bdb259
