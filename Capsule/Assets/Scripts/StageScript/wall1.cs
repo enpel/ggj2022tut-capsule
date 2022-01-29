@@ -10,7 +10,7 @@ public class wall1 : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             Debug.Log("a");
-            //rb.AddForce()
+            rb.AddForce(new Vector2 (10, 5));
         }
     }
 }
