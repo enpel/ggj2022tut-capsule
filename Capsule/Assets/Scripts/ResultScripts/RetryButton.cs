@@ -7,6 +7,6 @@ public class RetryButton : MonoBehaviour
 {
     public void ClickButton()
     {
-        SceneManager.LoadScene("DummyPlay");
+        SceneManager.LoadScene("PreInGame");
     }
 }

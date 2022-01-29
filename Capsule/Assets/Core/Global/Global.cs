@@ -1,5 +1,6 @@
 using Core.Effect.Scripts;
 using Core.Sound;
+using ScriptableObject;
 using UnityEngine;
 
 namespace Core.Global
@@ -23,6 +24,8 @@ namespace Core.Global
         }
         
         public static ISoundPlayer SoundPlayer => _soundPlayer;
+
+        static public StageData CurrentStageData { get; set; }
 
     }
 }
