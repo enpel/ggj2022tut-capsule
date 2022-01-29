@@ -1,35 +1,3 @@
-%YAML 1.1
-%TAG !u! tag:unity3d.com,2011:
---- !u!114 &11400000
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
-  m_Name: Localization-Locales
-  m_EditorClassIdentifier: 
-  m_GroupName: Localization-Locales
-  m_Data:
-    m_SerializedData: []
-  m_GUID: c0ec0f4ddbc93c940a4d6d8fa208cd0b
-  m_SerializeEntries:
-  - m_GUID: ddf4021402e7a064cae519d8cf01792a
-    m_Address: English (en)
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale
-  - m_GUID: b385cb1134d050e4bafa1d9d3a22c503
-    m_Address: Japanese (ja)
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale
-  m_ReadOnly: 1
-  m_Settings: {fileID: 11400000, guid: f9e7fb1365b90854bbc7abb9e83bf52f, type: 2}
-  m_SchemaSet:
-    m_Schemas:
-    - {fileID: 11400000, guid: cd7c90d31f3475e4280534503865c603, type: 2}
-    - {fileID: 11400000, guid: c5e0b04b21ef6f640ac7a704215eabbb, type: 2}
+version https://git-lfs.github.com/spec/v1
+oid sha256:2b74dabcbadd6b2a8a98e404b2d36b227d0243d20d21f454772deda4aea9ed58
+size 1113
