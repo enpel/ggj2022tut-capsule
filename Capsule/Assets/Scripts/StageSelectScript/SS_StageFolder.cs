@@ -159,4 +159,14 @@ public class SS_StageFolder : MonoBehaviour
         Global.CurrentStageData = SD[StageNumNow];
         SceneManager.LoadScene("PreInGame");
     }
+
+    public void OpenSetting()
+    {
+        Debug.Log("KokoniSettexinnguWoIreteKudasai");
+    }
+
+    public void BackToTitle()
+    {
+        SceneManager.LoadScene("Title");
+    }
 }
