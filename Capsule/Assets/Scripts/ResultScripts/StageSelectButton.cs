@@ -8,6 +8,6 @@ public class StageSelectButton : MonoBehaviour
 {
     public void ClickButton()
     {
-        SceneManager.LoadScene("StageSelect");
+        SceneManager.LoadScene("DummyStageSelect");
     }
 }
