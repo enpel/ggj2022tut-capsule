@@ -3,6 +3,8 @@ Shader "Unlit/UVScroll"
     Properties
     {
         _MainTex ("Texture", 2D) = "white" {}
+        _XVelocity("X Velocity", Range(-5.0, 5.0)) = 2.5
+        _YVelocity("Y Velocity", Range(-5.0, 5.0)) = 2.5
     }
     SubShader
     {
@@ -34,6 +36,8 @@ Shader "Unlit/UVScroll"
 
             sampler2D _MainTex;
             float4 _MainTex_ST;
+            float _XVelocity;
+            float _YVelocity;
 
             v2f vert (appdata v)
             {
@@ -48,8 +52,8 @@ Shader "Unlit/UVScroll"
             {
 
                 //add Shift
-                i.uv.x = i.uv.x + 2.5 * _Time;
-                i.uv.y = i.uv.y + 2.5 * _Time;
+                i.uv.x = i.uv.x + _XVelocity * _Time;
+                i.uv.y = i.uv.y + _YVelocity * _Time;
 
                 //i.uvの適用
                 fixed4 col = tex2D(_MainTex, i.uv);

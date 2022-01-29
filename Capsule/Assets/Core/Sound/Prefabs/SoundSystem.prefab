@@ -53,6 +53,8 @@ MonoBehaviour:
     audioClip: {fileID: 8300000, guid: c52be5fd75b470440b62f3d3dd3f9790, type: 3}
   - bgmType: 3
     audioClip: {fileID: 8300000, guid: 5f34e3c543c82474cb36c9cbe63d7add, type: 3}
+  - bgmType: 4
+    audioClip: {fileID: 8300000, guid: c52be5fd75b470440b62f3d3dd3f9790, type: 3}
   seData:
   - seType: 0
     audioClip: {fileID: 8300000, guid: 42cd7b8c1929b454db7c7a0710afc0a2, type: 3}
