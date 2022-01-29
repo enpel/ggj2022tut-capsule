@@ -328,6 +328,7 @@ MonoBehaviour:
   inWater: 0
   inWaterForce: 21.28
   rightFront: 0
+  charaSprite: {fileID: 0}
   punchForce: 22.21
   gariPunchHandL: {fileID: 5054279566584022173}
   mukiPunchHandL: {fileID: 5054279567408850823}
@@ -341,6 +342,8 @@ MonoBehaviour:
   punchTime: 0
   kapoeraInitTime: 0.5
   kapoeraTime: 0
+  Move: 0
+  Action: 0
 --- !u!114 &5054279566313674939
 MonoBehaviour:
   m_ObjectHideFlags: 0
