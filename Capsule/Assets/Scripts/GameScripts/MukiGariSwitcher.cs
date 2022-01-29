@@ -75,7 +75,7 @@ public class MukiGariSwitcher : MonoBehaviour
         {
             Time += 1;
             if(Time==1)
-                gariAnimator.SetTrigger("Action");
+                nowAnimator.SetTrigger("Action");
            
         }
         else
