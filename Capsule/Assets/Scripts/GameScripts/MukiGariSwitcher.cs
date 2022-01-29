@@ -7,6 +7,7 @@ public class MukiGariSwitcher : MonoBehaviour
 
     public GameObject gariSprite;
     public GameObject mukiSprite;
+    public GameObject nowCharaSprite;
 
     public Animator gariAnimator;
     public Animator mukiAnimator;
@@ -14,6 +15,8 @@ public class MukiGariSwitcher : MonoBehaviour
 
     public Playercontrol controller;
     public int Time;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -28,16 +31,26 @@ public class MukiGariSwitcher : MonoBehaviour
         if(controller.mascle==true)
         {
             nowAnimator = mukiAnimator;
+            nowCharaSprite = mukiSprite;
             mukiSprite.SetActive(true);
             gariSprite.SetActive(false);
         }
         else
         {
             nowAnimator = gariAnimator;
+            nowCharaSprite = gariSprite;
             gariSprite.SetActive(true);
             mukiSprite.SetActive(false);
         }
 
+        if(controller.rightFront==true)
+        {
+            nowCharaSprite.transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);
+        }
+        else
+        {
+            nowCharaSprite.transform.localScale = new Vector3(-0.1f, 0.1f, 0.1f);
+        }
         if (controller.handStand == true)
         {
             nowAnimator.SetBool("HandStand", true);
