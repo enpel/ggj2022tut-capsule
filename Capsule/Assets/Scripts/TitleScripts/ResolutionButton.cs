@@ -6,7 +6,7 @@ public class ResolutionButton : MonoBehaviour
 {
     void Start()
     {
-        Screen.SetResolution(640, 480, true);
+       // Screen.SetResolution(640, 480, FullScreenMode.ExclusiveFullScreen);
     }
     void Update()
     {
@@ -15,6 +15,6 @@ public class ResolutionButton : MonoBehaviour
     public void ClickButton()
     {
         // Screen.SetResolution(1280, 720, true);
-        Screen.SetResolution(320, 240, false);
+        //Screen.SetResolution(320, 240, false);
     }
 }
