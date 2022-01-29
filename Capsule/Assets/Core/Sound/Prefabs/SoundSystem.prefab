@@ -50,6 +50,18 @@ MonoBehaviour:
   seData:
   - seType: 0
     audioClip: {fileID: 8300000, guid: 42cd7b8c1929b454db7c7a0710afc0a2, type: 3}
+  - seType: 4
+    audioClip: {fileID: 8300000, guid: a7f29b45f0bf0924baf0fc3fcd6195bc, type: 3}
+  - seType: 5
+    audioClip: {fileID: 8300000, guid: cf96fd685c4c82b40977c0d0201070b7, type: 3}
+  - seType: 4
+    audioClip: {fileID: 8300000, guid: a01f005410f86ad43b37524324db44e7, type: 3}
+  - seType: 4
+    audioClip: {fileID: 8300000, guid: 374cf2d90de1b4a4e99a4f4aa2c4ebdf, type: 3}
+  - seType: 2
+    audioClip: {fileID: 8300000, guid: 621fc665f1933e5458d236212268f792, type: 3}
+  - seType: 3
+    audioClip: {fileID: 8300000, guid: 5352beaab6038ea4bb872f90e1669c48, type: 3}
 --- !u!1 &8420173913720656643
 GameObject:
   m_ObjectHideFlags: 0
