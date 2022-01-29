@@ -1,6 +1,13 @@
 namespace Sound
 {
 
+    public enum MixerType
+    {
+        Master,
+        Bgm,
+        Se
+    }
+
     public enum BgmType
     {
         Title,

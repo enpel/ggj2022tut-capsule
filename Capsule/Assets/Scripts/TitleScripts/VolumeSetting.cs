@@ -1,17 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
+using Core.Global;
+using Sound;
 using UnityEngine;
 
 public class VolumeSetting : MonoBehaviour
 {
-    private AudioSource audioSource;
     void Start()
     {
-        audioSource = gameObject.GetComponent<AudioSource>();
+        Global.SoundPlayer.PlayBGM(BgmType.Title);
     }
 
     public void SoundSliderOnValueChange(float newSliderValu)
     {
-        audioSource.volume = newSliderValu;
+        Global.SoundPlayer.SetVolume(MixerType.Master, newSliderValu);
     }
 }
