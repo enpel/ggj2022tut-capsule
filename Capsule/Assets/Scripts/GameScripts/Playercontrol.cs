@@ -146,6 +146,7 @@ public class Playercontrol : MonoBehaviour
                     kapoeraTime = kapoeraInitTime * 50;
                     gameObject.transform.Translate( new Vector3(0f, 1f, 0f));
                     rigid.AddForce(new Vector2(0, mukiKapoeraJumpForce), ForceMode2D.Impulse);
+                    Action = true;
                 }
                 else
                 {
@@ -191,22 +192,29 @@ public class Playercontrol : MonoBehaviour
         }
         else 
         {
-            if(kapoeraTime<=0)
+            if (handStand == true)
             {
-                mukiKapoeraKick.SetActive(false);
-                gariKapoeraKick.SetActive(false);
-                kapoeraTime = 0;
-                Action = false;
+                if (kapoeraTime <= 0)
+                {
+                    mukiKapoeraKick.SetActive(false);
+                    gariKapoeraKick.SetActive(false);
+                    kapoeraTime = 0;
+                    Action = false;
+                }
             }
-            if(punchTime<=0)
+
+            if (handStand == false)
             {
-                mukiPunchHandL.SetActive(false);
-                gariPunchHandL.SetActive(false);
-                mukiPunchHandR.SetActive(false);
-                gariPunchHandR.SetActive(false);
-                punchTime = 0;
-                rigid.velocity=new Vector2(0, 0);
-                Action = false;
+                if (punchTime <= 0)
+                {
+                    mukiPunchHandL.SetActive(false);
+                    gariPunchHandL.SetActive(false);
+                    mukiPunchHandR.SetActive(false);
+                    gariPunchHandR.SetActive(false);
+                    punchTime = 0;
+                    rigid.velocity = new Vector2(0, 0);
+                    Action = false;
+                }
             }
         }
 
