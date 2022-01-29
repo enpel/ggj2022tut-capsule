@@ -14,8 +14,11 @@ public class Playercontrol : MonoBehaviour
     public float speed;
 
     //攻撃系コライダオブジェクト
-    public GameObject punchHand;
-    public GameObject kapoeraKick;
+    public GameObject gariPunchHand;
+    public GameObject mukiPunchHand;
+    public GameObject gariKapoeraKick;
+    public GameObject mukiKapoeraKick;
+
 
     public KeyCode leftMoveKey;
     public KeyCode rightMoveKey;
@@ -39,6 +42,16 @@ public class Playercontrol : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+       //ガリ・ムキ判定
+       if(airGage>=1)
+       {
+            mascle = true;
+       }
+       if(airGage<=0)
+        {
+            airGage = 0;
+            mascle = false;
+        }
        //逆立ちになった時
         if(handStand==true)
         {
@@ -54,11 +67,17 @@ public class Playercontrol : MonoBehaviour
         //Move処理
         if(Input.GetKey(rightMoveKey))
         {
-            this.gameObject.transform.Translate(speed, 0, 0);
+            if(handStand==false)
+                this.gameObject.transform.Translate(speed, 0, 0);
+            if (handStand == true)
+                this.gameObject.transform.Translate(-speed, 0, 0);
         }
         else if (Input.GetKey(leftMoveKey))
         {
-            this.gameObject.transform.Translate(-speed, 0, 0);
+            if(handStand==false)
+                this.gameObject.transform.Translate(-speed, 0, 0);
+            if (handStand == true)
+                this.gameObject.transform.Translate(speed, 0, 0);
         }
 
         
@@ -76,29 +95,54 @@ public class Playercontrol : MonoBehaviour
         
         if(Input.GetMouseButtonDown(0))
         {
+            airGage -= 1;
             if(handStand==true)
             {
-                kapoeraKick.SetActive(true);
-                kapoeraTime = kapoeraInitTime*50;
+                if (mascle == true)
+                {
+                    mukiKapoeraKick.SetActive(true);
+                    kapoeraTime = kapoeraInitTime*50;
+                }
+                else
+                {
+                    gariKapoeraKick.SetActive(true);
+                    kapoeraTime = kapoeraInitTime * 50;
+                }                
             }
             else
             {
-
-                punchHand.SetActive(true);
-                punchTime = punchInitTime*50;
+                if (mascle == true)
+                {
+                    mukiPunchHand.SetActive(true);
+                    punchTime = punchInitTime * 50;
+                }
+                else
+                {
+                    gariPunchHand.SetActive(true);
+                    punchTime = punchInitTime * 50;                }
             }
             
         }
         else 
         {
-            if(kapoeraTime>=0)
+            if(kapoeraTime<=0)
             {
-                kapoeraKick.SetActive(false);
+                mukiKapoeraKick.SetActive(false);
+                gariKapoeraKick.SetActive(false);
+                kapoeraTime = 0;
             }
-            if(punchTime>=0)
+            if(punchTime<=0)
             {
-                punchHand.SetActive(false);
+                mukiPunchHand.SetActive(false);
+                gariPunchHand.SetActive(false);
+                punchTime = 0;
             }
         }
+
+    }
+    void FixedUpdate()
+    {
+        punchTime -= 1;
+        kapoeraTime -= 1;
     }
 }
