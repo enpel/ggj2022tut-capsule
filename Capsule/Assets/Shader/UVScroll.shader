@@ -2,7 +2,7 @@ Shader "Unlit/UVScroll"
 {
     Properties
     {
-        _MainTex1 ("Texture", 2D) = "white" {}
+        _MainTex ("Texture", 2D) = "white" {}
     }
     SubShader
     {
@@ -48,8 +48,8 @@ Shader "Unlit/UVScroll"
             {
 
                 //add Shift
-                i.uv.x = i.uv.x + 1 * _Time;
-                i.uv.y = i.uv.y + 1 * _Time;
+                i.uv.x = i.uv.x + 2.5 * _Time;
+                i.uv.y = i.uv.y + 2.5 * _Time;
 
                 //i.uvの適用
                 fixed4 col = tex2D(_MainTex, i.uv);
