@@ -144,6 +144,7 @@ public class Playercontrol : MonoBehaviour
                 {
                     mukiKapoeraKick.SetActive(true);
                     kapoeraTime = kapoeraInitTime * 50;
+                    gameObject.transform.Translate( new Vector3(0f, 0.1f, 0f));
                     rigid.AddForce(new Vector2(0, mukiKapoeraJumpForce), ForceMode2D.Impulse);
                 }
                 else
