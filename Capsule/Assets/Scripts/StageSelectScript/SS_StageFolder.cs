@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Core.Global;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
@@ -151,6 +152,7 @@ public class SS_StageFolder : MonoBehaviour
 
     public void StartStage()
     {
-        SceneManager.LoadScene(SD[StageNumNow].StageScene);
+        Global.CurrentStageData = SD[StageNumNow];
+        SceneManager.LoadScene("PreInGame");
     }
 }
