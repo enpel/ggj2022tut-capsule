@@ -19,8 +19,14 @@ public class Playercontrol : MonoBehaviour
 
     public KeyCode leftMoveKey;
     public KeyCode rightMoveKey;
-    public KeyCode handStandSwitch;
-    public KeyCode actionKey;
+
+
+    //攻撃コライダ出現時間
+    public float punchInitTime;
+    public float punchTime;
+    public float kapoeraInitTime;
+    public float kapoeraTime;
+
 
     // Start is called before the first frame update
     void Start()
@@ -48,15 +54,15 @@ public class Playercontrol : MonoBehaviour
         //Move処理
         if(Input.GetKey(rightMoveKey))
         {
-
+            this.gameObject.transform.Translate(speed, 0, 0);
         }
         else if (Input.GetKey(leftMoveKey))
         {
-
+            this.gameObject.transform.Translate(-speed, 0, 0);
         }
 
         
-        if(Input.GetKey(handStandSwitch))
+        if(Input.GetMouseButtonDown(1))
         {
             if(handStand==true)
             {
@@ -67,18 +73,32 @@ public class Playercontrol : MonoBehaviour
                 handStand = true;
             }
         }
-
-        if(Input.GetKey(actionKey))
+        
+        if(Input.GetMouseButtonDown(0))
         {
             if(handStand==true)
             {
-
+                kapoeraKick.SetActive(true);
+                kapoeraTime = kapoeraInitTime*50;
             }
             else
             {
 
+                punchHand.SetActive(true);
+                punchTime = punchInitTime*50;
             }
             
+        }
+        else 
+        {
+            if(kapoeraTime>=0)
+            {
+                kapoeraKick.SetActive(false);
+            }
+            if(punchTime>=0)
+            {
+                punchHand.SetActive(false);
+            }
         }
     }
 }
