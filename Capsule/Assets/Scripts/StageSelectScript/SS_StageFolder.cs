@@ -16,7 +16,8 @@ public class SS_StageFolder : MonoBehaviour
     private float MoveTimeNow = 0;
     public float MoveTimeLong = 1.0f;
 
-    public StageData[] SD;
+    public StageListData StageListData;
+    private StageData[] SD => StageListData.Stages;
     private GameObject[] SLGO;
     public GameObject SLPrefab;
     private GameObject[] SSSGO;
