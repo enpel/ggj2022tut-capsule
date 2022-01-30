@@ -4,37 +4,28 @@ using Cysharp.Threading.Tasks;
 using UniRx;
 using UnityEngine;
 using UnityEngine.Localization.Settings;
-using UnityEngine.UI;
 
 public class ChangeLanguageButton : MonoBehaviour
 {
-    [SerializeField] private Button _button;
-    
-    
+
+    int _currentLocateIndex = 0;
+
 
     // Start is called before the first frame update
-    async void  Start()
+    public void ChangeLanguage()
     {
-        await LocalizationSettings.InitializationOperation;
-        
-        int _currentLocateIndex = 0;
-        _currentLocateIndex = LocalizationSettings.AvailableLocales.Locales.FindIndex(x => x == LocalizationSettings.SelectedLocale);
+        _currentLocateIndex =
+            LocalizationSettings.AvailableLocales.Locales.FindIndex(x => x == LocalizationSettings.SelectedLocale);
         if (_currentLocateIndex < 0) _currentLocateIndex = 0;
-        
-        _button.OnClickAsObservable().Subscribe(x =>
-        {
-            var nextIndex = _currentLocateIndex;
-            nextIndex++;
-            if (nextIndex >= LocalizationSettings.AvailableLocales.Locales.Count)
-            {
-                nextIndex = 0;
-            }
-        
-            _currentLocateIndex = nextIndex;
-            LocalizationSettings.SelectedLocale =  LocalizationSettings.AvailableLocales.Locales[nextIndex];
-        }).AddTo(this);
-    }
-    
-    
 
+        var nextIndex = _currentLocateIndex;
+        nextIndex++;
+        if (nextIndex >= LocalizationSettings.AvailableLocales.Locales.Count)
+        {
+            nextIndex = 0;
+        }
+
+        _currentLocateIndex = nextIndex;
+        LocalizationSettings.SelectedLocale = LocalizationSettings.AvailableLocales.Locales[nextIndex];
+    }
 }
