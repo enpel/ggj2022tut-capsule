@@ -55,6 +55,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5683619226877033524}
     m_Modifications:
+    - target: {fileID: 5138491369952429553, guid: c7e6bd14d1edc2d48b53daeafa787943, type: 3}
+      propertyPath: seData.Array.size
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 5138491369952429553, guid: c7e6bd14d1edc2d48b53daeafa787943, type: 3}
+      propertyPath: seData.Array.data[11].seType
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5138491369952429553, guid: c7e6bd14d1edc2d48b53daeafa787943, type: 3}
+      propertyPath: seData.Array.data[12].seType
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 5138491369952429553, guid: c7e6bd14d1edc2d48b53daeafa787943, type: 3}
+      propertyPath: seData.Array.data[11].audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: f48789852c29e4f47b0406504f55b8a0, type: 3}
+    - target: {fileID: 5138491369952429553, guid: c7e6bd14d1edc2d48b53daeafa787943, type: 3}
+      propertyPath: seData.Array.data[12].audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 8ee47a8e58d054c14a9aa48f3f205594, type: 3}
     - target: {fileID: 8420173914091490835, guid: c7e6bd14d1edc2d48b53daeafa787943, type: 3}
       propertyPath: m_RootOrder
       value: 0
