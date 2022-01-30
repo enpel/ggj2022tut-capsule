@@ -24,6 +24,9 @@ EditorBuildSettings:
     path: Assets/Scenes/PreInGame.unity
     guid: 4ac8febc0ba9c5e4e820cf7ea0e027b0
   - enabled: 1
+    path: Assets/Scenes/InGameSetup.unity
+    guid: 101fbb184c9c1344a8853512c6a34672
+  - enabled: 1
     path: Assets/Scenes/Stages/Stage0_0.unity
     guid: c2b019c8ff14e7c408637f3f09cc3607
   - enabled: 1

@@ -23,7 +23,14 @@ namespace Core.Global
         }
         
         public static ISoundPlayer SoundPlayer => _soundPlayer;
-        public static StageData CurrentStageData { get; set; }
+        public static StageData PreStageData { get; private set; }
+        public static StageData CurrentStageData { get; private set; }
+
+        public static void SetCurrentStageData(StageData data)
+        {
+            PreStageData = CurrentStageData;
+            CurrentStageData = data;
+        }
         
         public static SaveDataSystem SaveDataSystem { get; set; }
 
