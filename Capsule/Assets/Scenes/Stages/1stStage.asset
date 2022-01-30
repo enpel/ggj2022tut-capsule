@@ -9,8 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9d87d41c86a7402da54c1bc2296175a0, type: 3}
+  m_Script: {fileID: 11500000, guid: b86a95b1afd05424ab860772a160eea1, type: 3}
   m_Name: 1stStage
   m_EditorClassIdentifier: 
-  "\u540D\u524D": 
-  "\u30A2\u30A4\u30B3\u30F3": {fileID: 0}
+  "\u30B9\u30C6\u30FC\u30B8\u540D": "\u6C34\u306B\u5165\u308A\u3057\u98A8\u8239"
+  "\u30EC\u30D9\u30EB\u30C7\u30B6\u30A4\u30CA\u30FC": {fileID: 11400000, guid: 25480fc38b4394942917deb0bf3592ec, type: 2}
+  "\u30B5\u30E0\u30CD\u30A4\u30EB": {fileID: 0}
+  scene:
+    m_SceneName: "1stStage_\u03B1"
