@@ -7,8 +7,6 @@ using Sound;
 
 public class Miss : MonoBehaviour
 {
-    static 
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player")
