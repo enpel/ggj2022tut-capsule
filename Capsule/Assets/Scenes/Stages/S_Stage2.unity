@@ -5372,6 +5372,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7185124959269727758, guid: bea9018ab5b3bd8418809b617a07f381, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: b9c1b232d711b9a48b8e9d023508f94a, type: 2}
+    - target: {fileID: 7185124959269727758, guid: bea9018ab5b3bd8418809b617a07f381, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -8468557381500183888, guid: b9c1b232d711b9a48b8e9d023508f94a, type: 2}
+    - target: {fileID: 7185124959269727759, guid: bea9018ab5b3bd8418809b617a07f381, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: -8468557381500183888, guid: b9c1b232d711b9a48b8e9d023508f94a, type: 2}
     - target: {fileID: 8945885072977162447, guid: bea9018ab5b3bd8418809b617a07f381, type: 3}
       propertyPath: m_Name
       value: AirPomp
