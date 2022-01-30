@@ -13,7 +13,7 @@ public class Miss : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            Global.SoundPlayer.PlaySE(SeType.GariPunch);
+            Global.SoundPlayer.PlaySE(SeType.JingleDead);
             SceneManager.LoadScene("PreInGame");
         }
     }
