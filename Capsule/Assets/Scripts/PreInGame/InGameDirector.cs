@@ -1,6 +1,9 @@
 using Cinemachine;
+using Core.Global;
+using Sound;
 using UniRx;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class InGameDirector : MonoBehaviour
 {
@@ -40,5 +43,11 @@ public class InGameDirector : MonoBehaviour
     private void SetAirValue(int value)
     {
         _airGaugeView.SetValue(value);
+    }
+
+    public void Retry()
+    {
+        SceneManager.LoadScene("PreInGame");
+        Global.SoundPlayer.PlaySE(SeType.OK);
     }
 }
