@@ -19,15 +19,25 @@ namespace PreInGame
         // Start is called before the first frame update
         async void Start()
         {
-            Global.SoundPlayer.PlayBGM(BgmType.PreInGame);
+            var isFirstPlay = Global.CurrentStageData != null&&
+                              Global.PreStageData != null && 
+                              Global.CurrentStageData.StageName != Global.PreStageData.StageName;
 
-            await UniTask.Delay(TimeSpan.FromSeconds(3.0f));
-            
+            if (isFirstPlay)
+            {
+                
+                Global.SoundPlayer.PlayBGM(BgmType.PreInGame);
+                preInGameSceneObject.SetActive(true);
+                await UniTask.Delay(TimeSpan.FromSeconds(3.0f));
+            }
+
             await SceneManager.LoadSceneAsync("InGameSetup", LoadSceneMode.Additive);
             if (!isDebug) await SceneManager.LoadSceneAsync(Global.CurrentStageData.StageScene, LoadSceneMode.Additive);
             
             GameObject.FindObjectOfType<InGameDirector>().SetupInGame();
             preInGameSceneObject.SetActive(false);
+            
+            Global.SetCurrentStageData(Global.CurrentStageData);
 
         }
 
