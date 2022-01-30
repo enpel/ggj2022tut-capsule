@@ -6,33 +6,33 @@ using UnityEngine;
 
 public class Playercontrol : MonoBehaviour
 {
-    //‹t—§‚¿ó‘Ô‚ÌTrue
+    //ï¿½tï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô‚Ìï¿½True
     public bool handStand;
-    //‹ó‹C—Ê
+    //ï¿½ï¿½Cï¿½ï¿½
     public int airGage;
-    //ƒ}ƒbƒ`ƒ‡‚©”Û‚©
+    //ï¿½}ï¿½bï¿½`ï¿½ï¿½ï¿½ï¿½ï¿½Û‚ï¿½
     public bool mascle;
-    //ƒvƒŒƒCƒ„[‚ÌˆÚ“®‘¬“x
+    //ï¿½vï¿½ï¿½ï¿½Cï¿½ï¿½ï¿½[ï¿½ÌˆÚ“ï¿½ï¿½ï¿½ï¿½x
     public float speed;
-    //ƒ}ƒbƒ`ƒ‡‚Ì‚ÌƒWƒƒƒ“ƒv—Í
+    //ï¿½}ï¿½bï¿½`ï¿½ï¿½ï¿½Ìï¿½ï¿½ÌƒWï¿½ï¿½ï¿½ï¿½ï¿½vï¿½ï¿½
     public float mukiKapoeraJumpForce;
-    //ƒKƒŠƒKƒŠ‚Ìö…—Í
+    //ï¿½Kï¿½ï¿½ï¿½Kï¿½ï¿½ï¿½ï¿½ï¿½Ìï¿½ï¿½ï¿½ï¿½ï¿½
     public float gariKapoeraDiveForce;
 
-    //…‚É“ü‚Á‚Ä‚é‚©‚Ç‚¤‚©‚Ì”»’è
+    //ï¿½ï¿½ï¿½É“ï¿½ï¿½ï¿½ï¿½Ä‚é‚©ï¿½Ç‚ï¿½ï¿½ï¿½ï¿½Ì”ï¿½ï¿½ï¿½
     public bool inWater;
-    //…‚Ì•‚—Í
+    //ï¿½ï¿½ï¿½Ì•ï¿½ï¿½ï¿½
     public float inWaterForce;
 
-    //‰EŒü‚«¶Œü‚«”»’è
+    //ï¿½Eï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
     public bool rightFront;
 
-    //ƒXƒvƒ‰ƒCƒgƒIƒuƒWƒFƒNƒg
+    //ï¿½Xï¿½vï¿½ï¿½ï¿½Cï¿½gï¿½Iï¿½uï¿½Wï¿½Fï¿½Nï¿½g
     public GameObject charaSprite;
     //
     public float punchForce;
 
-    //UŒ‚ŒnƒRƒ‰ƒCƒ_ƒIƒuƒWƒFƒNƒg
+    //ï¿½Uï¿½ï¿½ï¿½nï¿½Rï¿½ï¿½ï¿½Cï¿½_ï¿½Iï¿½uï¿½Wï¿½Fï¿½Nï¿½g
     public GameObject gariPunchHandL;
     public GameObject mukiPunchHandL;
     public GameObject gariPunchHandR;
@@ -43,7 +43,7 @@ public class Playercontrol : MonoBehaviour
     public KeyCode leftMoveKey;
     public KeyCode rightMoveKey;
 
-    //UŒ‚ƒRƒ‰ƒCƒ_oŒ»ŠÔ
+    //ï¿½Uï¿½ï¿½ï¿½Rï¿½ï¿½ï¿½Cï¿½_ï¿½oï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
     public float punchInitTime;
     public float punchTime;
     public float kapoeraInitTime;
@@ -61,7 +61,7 @@ public class Playercontrol : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //‰Šú‰»İ’è
+        //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½İ’ï¿½
         handStand = false;
         airGage = 0;
         rigid = this.gameObject.GetComponent<Rigidbody2D>();
@@ -72,7 +72,7 @@ public class Playercontrol : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //ƒKƒŠEƒ€ƒL”»’è
+        //ï¿½Kï¿½ï¿½ï¿½Eï¿½ï¿½ï¿½Lï¿½ï¿½ï¿½ï¿½
         if(airGage>=1)
         {
             if (!mascle)
@@ -87,7 +87,7 @@ public class Playercontrol : MonoBehaviour
             mascle = false;
         }
 
-        //ƒJƒvƒZƒ‹ƒRƒ‰ƒCƒ_’²®
+        //ï¿½Jï¿½vï¿½Zï¿½ï¿½ï¿½Rï¿½ï¿½ï¿½Cï¿½_ï¿½ï¿½ï¿½ï¿½
         if(mascle==true)
         {
             colmanage.offset = new Vector2(0f, -0.2f);
@@ -99,7 +99,7 @@ public class Playercontrol : MonoBehaviour
             colmanage.size = new Vector2(0.22f, 1.56f);
         }
 
-        //Moveˆ—
+        //Moveï¿½ï¿½ï¿½ï¿½
         if(Input.GetKey(rightMoveKey))
         {
             Move = true;
@@ -123,11 +123,6 @@ public class Playercontrol : MonoBehaviour
             Move = false;
         }
   
-
-        if(inWater==true)
-        {
-            rigid.AddForce(new Vector2(0, inWaterForce));
-        }
 
 
         if(Input.GetMouseButtonDown(1))
@@ -235,5 +230,12 @@ public class Playercontrol : MonoBehaviour
     {
         punchTime -= 1;
         kapoeraTime -= 1;
+        
+        
+        if(inWater==true)
+        {
+            rigid.AddForce(new Vector2(0, inWaterForce));
+        }
+
     }
 }
