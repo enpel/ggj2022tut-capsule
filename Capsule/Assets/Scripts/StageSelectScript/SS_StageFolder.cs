@@ -62,6 +62,7 @@ public class SS_StageFolder : MonoBehaviour
 
         StageNumBefore = StageNumNow;
         StageNumLimit = SD.Length;
+
         Global.SoundPlayer.PlaySE(SeType.OK);
         
         Global.SoundPlayer.PlayBGM(BgmType.StageSelect);
@@ -159,7 +160,7 @@ public class SS_StageFolder : MonoBehaviour
 
     public void StartStage()
     {
-        Global.SoundPlayer.PlaySE(SeType.OK);
+        SceneTracker.ssToIG = true;
         Global.SetCurrentStageData(SD[StageNumNow]);
         SceneManager.LoadScene("PreInGame");
     }
@@ -171,7 +172,7 @@ public class SS_StageFolder : MonoBehaviour
 
     public void BackToTitle()
     {
-        Global.SoundPlayer.PlaySE(SeType.Cancel);
+        SceneTracker.returnTitleScene = true;
         SceneManager.LoadScene("Title");
     }
 }
