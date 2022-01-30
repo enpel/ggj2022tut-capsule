@@ -62,7 +62,7 @@ public class SS_StageFolder : MonoBehaviour
 
         StageNumBefore = StageNumNow;
         StageNumLimit = SD.Length;
-        
+        Global.SoundPlayer.PlaySE(SeType.OK);
         
         Global.SoundPlayer.PlayBGM(BgmType.StageSelect);
     }
