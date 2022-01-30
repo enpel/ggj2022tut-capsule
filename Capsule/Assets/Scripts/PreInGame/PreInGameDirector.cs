@@ -20,6 +20,8 @@ namespace PreInGame
             preInGameSceneObject.SetActive(true);
             await UniTask.Delay(TimeSpan.FromSeconds(3.0f));
             
+            Global.SoundPlayer.StopBGMAll();
+
             await SceneManager.LoadSceneAsync("InGameSetup", LoadSceneMode.Additive);
             if (!isDebug) await SceneManager.LoadSceneAsync(Global.CurrentStageData.StageScene, LoadSceneMode.Additive);
             
