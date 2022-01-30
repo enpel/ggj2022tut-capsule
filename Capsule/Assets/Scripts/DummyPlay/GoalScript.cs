@@ -12,9 +12,7 @@ public class GoalScript : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player" && FlagEffect)
         {
-            Instantiate(ClearEffect);
-
-            Invoke("MoveToResult", 3);
+            SceneManager.LoadScene("Result", LoadSceneMode.Additive);
 
             FlagEffect = false;
         }
@@ -22,6 +20,5 @@ public class GoalScript : MonoBehaviour
 
     private void MoveToResult()
     {
-        SceneManager.LoadScene("Result", LoadSceneMode.Additive);
     }
 }
