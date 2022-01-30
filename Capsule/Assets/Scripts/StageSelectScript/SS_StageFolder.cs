@@ -96,10 +96,10 @@ public class SS_StageFolder : MonoBehaviour
 
         // 6GyoumeMade
         return "No. " + (folderNum + 1)
-            + "\n" + SD[folderNum].StageName
-            + "\n" + "Creator:" + SD[folderNum].LevelDesigner.Name
             + "\n" + ""
-            + "\n" + StageStateText
+            + "\n" + SD[folderNum].StageName
+            + "\n" + ""
+            + "\n" + "Creator:" + SD[folderNum].LevelDesigner.Name
             + "\n" + "";
     }
 
