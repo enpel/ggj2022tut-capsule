@@ -156,7 +156,7 @@ public class SS_StageFolder : MonoBehaviour
 
     public void StartStage()
     {
-        Global.CurrentStageData = SD[StageNumNow];
+        Global.SetCurrentStageData(SD[StageNumNow]);
         SceneManager.LoadScene("PreInGame");
     }
 
