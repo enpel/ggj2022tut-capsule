@@ -104,6 +104,7 @@ public class SS_StageFolder : MonoBehaviour
 
     public void StageNumInc()
     {
+        Global.SoundPlayer.PlaySE(SeType.Select);
         if (MoveTimeNow <= 0)
         {
             MoveTimeNow = MoveTimeLong;
@@ -123,6 +124,7 @@ public class SS_StageFolder : MonoBehaviour
     }
     public void StageNumDec()
     {
+        Global.SoundPlayer.PlaySE(SeType.Select);
         if (MoveTimeNow <= 0)
         {
             MoveTimeNow = MoveTimeLong;
@@ -157,6 +159,7 @@ public class SS_StageFolder : MonoBehaviour
 
     public void StartStage()
     {
+        Global.SoundPlayer.PlaySE(SeType.OK);
         Global.SetCurrentStageData(SD[StageNumNow]);
         SceneManager.LoadScene("PreInGame");
     }
@@ -168,6 +171,7 @@ public class SS_StageFolder : MonoBehaviour
 
     public void BackToTitle()
     {
+        Global.SoundPlayer.PlaySE(SeType.Cancel);
         SceneManager.LoadScene("Title");
     }
 }

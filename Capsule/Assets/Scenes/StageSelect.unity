@@ -3199,18 +3199,6 @@ PrefabInstance:
       propertyPath: StageList
       value: 
       objectReference: {fileID: 1837435149}
-    - target: {fileID: 6133631455789558028, guid: 5b043d65c5e2d6d45a267cb3751b7c7c, type: 3}
-      propertyPath: SD.Array.size
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 6133631455789558028, guid: 5b043d65c5e2d6d45a267cb3751b7c7c, type: 3}
-      propertyPath: SD.Array.data[4]
-      value: 
-      objectReference: {fileID: 11400000, guid: b2b986303adfcc74dbc2a1be9db924db, type: 2}
-    - target: {fileID: 6133631455789558028, guid: 5b043d65c5e2d6d45a267cb3751b7c7c, type: 3}
-      propertyPath: SD.Array.data[5]
-      value: 
-      objectReference: {fileID: 11400000, guid: 503abff222053c94da932df822c09094, type: 2}
     - target: {fileID: 6133631455789558029, guid: 5b043d65c5e2d6d45a267cb3751b7c7c, type: 3}
       propertyPath: m_RootOrder
       value: 3
