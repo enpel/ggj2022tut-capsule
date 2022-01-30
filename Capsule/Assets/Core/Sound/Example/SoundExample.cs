@@ -4,7 +4,7 @@ using UniRx;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class NewBehaviourScript : MonoBehaviour
+public class SoundExample : MonoBehaviour
 {
     [SerializeField] private Button seButton;
 
