@@ -4350,7 +4350,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 300, y: -500}
-  m_SizeDelta: {x: 600, y: 1000}
+  m_SizeDelta: {x: 600, y: 1200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1550576355
 MonoBehaviour:
@@ -4372,50 +4372,50 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "# Team Capsule \r\n\r\n## GariMukiYair!\nAttribution-NonCommercial-ShareAlike
-    4.0 International (CC BY-NC-SA 4.0)\r\n\r\n# Using Resource\r\n## OtoLogic\r\nhttps://otologic.jp/\r\n##
-    \u9B54\u738B\u9B42\r\nhttps://maou.audio/\r\n## GoogleFont\r\nhttps://fonts.google.com/\r\nSIL
-    Open Font License\r\n\r\n# Reference\r\n\r\n## SceneObject.cs\r\nhttps://gist.github.com/Hertzole/ac269f3148bc5192cc2eb6d472870d24\r\n\r\n#
-    Packages\r\n\r\n\r\n### UniTask\r\nThe MIT License (MIT)\r\n\r\nCopyright (c)
-    2019 Yoshifumi Kawai / Cysharp, Inc.\r\n\r\nPermission is hereby granted, free
-    of charge, to any person obtaining a copy\r\nof this software and associated
+  m_text: "\r\n## TeamCapsule\r\n\r\nTakuyaSagara\r\n\r\nMitsuru Watanabe\r\n\r\nTakuto
+    Watanabe\r\n\r\nTakumi Sato\r\n\r\nKeisuke Abe\r\n\r\nKaito Takeda\r\n\r\n##
+    Using\r\n\r\n## OtoLogic\r\nhttps://otologic.jp/\r\n## \u9B54\u738B\u9B42\r\nhttps://maou.audio/\r\n##
+    GoogleFont\r\nhttps://fonts.google.com/\r\nSIL Open Font License\r\n# Reference\r\n##
+    SceneObject.cs\r\nhttps://gist.github.com/Hertzole/ac269f3148bc5192cc2eb6d472870d24\r\n\r\n#
+    Packages\r\n\r\n### UniTask\r\nThe MIT License (MIT)\r\nCopyright (c) 2019 Yoshifumi
+    Kawai / Cysharp, Inc.\r\nPermission is hereby granted, free of charge, to any
+    person obtaining a copy\r\nof this software and associated documentation files
+    (the \"Software\"), to deal\r\nin the Software without restriction, including
+    without limitation the rights\r\nto use, copy, modify, merge, publish, distribute,
+    sublicense, and/or sell\r\ncopies of the Software, and to permit persons to whom
+    the Software is\r\nfurnished to do so, subject to the following conditions:\r\nThe
+    above copyright notice and this permission notice shall be included in all\r\ncopies
+    or substantial portions of the Software.\r\nTHE SOFTWARE IS PROVIDED \"AS IS\",
+    WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\r\nIMPLIED, INCLUDING BUT NOT LIMITED
+    TO THE WARRANTIES OF MERCHANTABILITY,\r\nFITNESS FOR A PARTICULAR PURPOSE AND
+    NONINFRINGEMENT. IN NO EVENT SHALL THE\r\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE
+    FOR ANY CLAIM, DAMAGES OR OTHER\r\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+    TORT OR OTHERWISE, ARISING FROM,\r\nOUT OF OR IN CONNECTION WITH THE SOFTWARE
+    OR THE USE OR OTHER DEALINGS IN THE\r\nSOFTWARE.\r\n### UniRx\r\nThe MIT License
+    (MIT)\r\nCopyright (c) 2018 Yoshifumi Kawai\r\nPermission is hereby granted,
+    free of charge, to any person obtaining a copy\r\nof this software and associated
     documentation files (the \"Software\"), to deal\r\nin the Software without restriction,
     including without limitation the rights\r\nto use, copy, modify, merge, publish,
     distribute, sublicense, and/or sell\r\ncopies of the Software, and to permit
     persons to whom the Software is\r\nfurnished to do so, subject to the following
-    conditions:\r\n\r\nThe above copyright notice and this permission notice shall
-    be included in all\r\ncopies or substantial portions of the Software.\r\n\r\nTHE
-    SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\r\nIMPLIED,
-    INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\r\nFITNESS FOR
-    A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\r\nAUTHORS OR
-    COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\r\nLIABILITY, WHETHER
-    IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\r\nOUT OF OR IN CONNECTION
-    WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\r\nSOFTWARE.\r\n\r\n###
-    UniRx\r\nThe MIT License (MIT)\r\n\r\nCopyright (c) 2018 Yoshifumi Kawai\r\n\r\nPermission
-    is hereby granted, free of charge, to any person obtaining a copy\r\nof this
-    software and associated documentation files (the \"Software\"), to deal\r\nin
-    the Software without restriction, including without limitation the rights\r\nto
-    use, copy, modify, merge, publish, distribute, sublicense, and/or sell\r\ncopies
-    of the Software, and to permit persons to whom the Software is\r\nfurnished to
-    do so, subject to the following conditions:\r\n\r\nThe above copyright notice
-    and this permission notice shall be included in all\r\ncopies or substantial
-    portions of the Software.\r\n\r\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT
-    WARRANTY OF ANY KIND, EXPRESS OR\r\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE
-    WARRANTIES OF MERCHANTABILITY,\r\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
-    IN NO EVENT SHALL THE\r\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
-    DAMAGES OR OTHER\r\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
-    ARISING FROM,\r\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
-    DEALINGS IN THE\r\nSOFTWARE.\r\n\r\n### VContainer\r\n\r\nCopyright (c) 2020
-    hadashiA\r\n\r\nPermission is hereby granted, free of charge, to any person obtaining
-    a copy\r\nof this software and associated documentation files (the \"Software\"),
-    to deal\r\nin the Software without restriction, including without limitation
-    the rights\r\nto use, copy, modify, merge, publish, distribute, sublicense, and/or
-    sell\r\ncopies of the Software, and to permit persons to whom the Software is\r\nfurnished
-    to do so, subject to the following conditions:\r\n\r\nThe above copyright notice
-    and this permission notice shall be included in all\r\ncopies or substantial
-    portions of the Software.\r\n\r\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT
-    WARRANTY OF ANY KIND, EXPRESS OR\r\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE
-    WARRANTIES OF MERCHANTABILITY,\r\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+    conditions:\r\nThe above copyright notice and this permission notice shall be
+    included in all\r\ncopies or substantial portions of the Software.\r\nTHE SOFTWARE
+    IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\r\nIMPLIED, INCLUDING
+    BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\r\nFITNESS FOR A PARTICULAR
+    PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\r\nAUTHORS OR COPYRIGHT HOLDERS
+    BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\r\nLIABILITY, WHETHER IN AN ACTION
+    OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\r\nOUT OF OR IN CONNECTION WITH
+    THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\r\nSOFTWARE.\r\n### VContainer\r\nCopyright
+    (c) 2020 hadashiA\r\nPermission is hereby granted, free of charge, to any person
+    obtaining a copy\r\nof this software and associated documentation files (the
+    \"Software\"), to deal\r\nin the Software without restriction, including without
+    limitation the rights\r\nto use, copy, modify, merge, publish, distribute, sublicense,
+    and/or sell\r\ncopies of the Software, and to permit persons to whom the Software
+    is\r\nfurnished to do so, subject to the following conditions:\r\nThe above copyright
+    notice and this permission notice shall be included in all\r\ncopies or substantial
+    portions of the Software.\r\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY
+    OF ANY KIND, EXPRESS OR\r\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
+    OF MERCHANTABILITY,\r\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
     IN NO EVENT SHALL THE\r\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
     DAMAGES OR OTHER\r\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
     ARISING FROM,\r\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
