@@ -3204,6 +3204,10 @@ PrefabInstance:
       value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6133631455789558028, guid: 5b043d65c5e2d6d45a267cb3751b7c7c, type: 3}
+      propertyPath: StageListData
+      value: 
+      objectReference: {fileID: 11400000, guid: a5246982d1c983c43a473486a346fd8c, type: 2}
+    - target: {fileID: 6133631455789558028, guid: 5b043d65c5e2d6d45a267cb3751b7c7c, type: 3}
       propertyPath: SD.Array.data[0]
       value: 
       objectReference: {fileID: 11400000, guid: 2e0b82a0c723ad04297b643e3e446cc0, type: 2}
