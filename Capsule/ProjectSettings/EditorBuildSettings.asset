@@ -21,6 +21,15 @@ EditorBuildSettings:
     path: Assets/Scenes/Stages/_StageTemplate.unity
     guid: 48360395055b025478a85964422d71f3
   - enabled: 1
+    path: Assets/Scenes/Stages/S_Stage2.unity
+    guid: 4046f5ffece767640aae7e70b00a99af
+  - enabled: 1
+    path: Assets/Scenes/Stages/S_Stage3.unity
+    guid: f03b4e40a6e2f30449634e50fcb449e9
+  - enabled: 1
+    path: Assets/Scenes/Stages/Satou_Stage1.unity
+    guid: f73725c7701937a4a9676afb7899e451
+  - enabled: 1
     path: Assets/Scenes/PreInGame.unity
     guid: 4ac8febc0ba9c5e4e820cf7ea0e027b0
   - enabled: 1
