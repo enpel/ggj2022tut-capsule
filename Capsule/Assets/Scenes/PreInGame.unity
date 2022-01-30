@@ -1555,7 +1555,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4850817378689842789, guid: 1cdaad0e23afb4a48abd4af10e18dd19, type: 3}
       propertyPath: isDebug
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4850817378689842789, guid: 1cdaad0e23afb4a48abd4af10e18dd19, type: 3}
       propertyPath: playerPrefab
