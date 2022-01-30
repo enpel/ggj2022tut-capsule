@@ -5,13 +5,20 @@ using UnityEngine;
 public class wall1 : MonoBehaviour
 {
     private Rigidbody rb;
+    [SerializeField] GameObject wall;
     private void OnCollisionEnter2D(Collision2D collision)
     {
-       // if (collision.gameObject.tag == "Player")
+       // if (collision.gameObject.tag == "")GariPunch
         //{
-            Debug.Log("a");
-            rb.AddForce(new Vector2 (10, 5));
-            transform.localScale = new Vector2(0.5f, 0.5f);
-      //  }
+            Debug.Log("G");
+            rb.AddForce(new Vector2 (1.0f, 0));
+        //  }
+
+        // else if (collision.gameObject.tag == "") MukiPunch
+        //{
+            Debug.Log("M");
+        rb.AddForce(new Vector2(3.0f, 0));
+        wall.SetActive(false);
+        //  }
     }
 }
