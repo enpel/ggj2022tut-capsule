@@ -45,11 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MoveTimeLong: 0.5
-  SD:
-  - {fileID: 11400000, guid: 501760bd3a6250847b47203296c7a7cd, type: 2}
-  - {fileID: 11400000, guid: e5d455bce6b9f354ea178edf9e6090cd, type: 2}
-  - {fileID: 11400000, guid: 2578d19ebdc7fe542a029aced63bae03, type: 2}
-  - {fileID: 11400000, guid: 501760bd3a6250847b47203296c7a7cd, type: 2}
+  StageListData: {fileID: 11400000, guid: a5246982d1c983c43a473486a346fd8c, type: 2}
   SLPrefab: {fileID: 378598553839017137, guid: 9a699a1fc3886f74396fa5781d5fa6aa, type: 3}
   SSSPrefab: {fileID: 7766104217379429363, guid: 3136b4b6e78cbf14a894244fd8367a0d, type: 3}
   ASPrefab: {fileID: 2146762394657675711, guid: e33638e4452fb424488d3eefbc0eab20, type: 3}
