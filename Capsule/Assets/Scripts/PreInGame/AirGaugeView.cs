@@ -1,16 +1,17 @@
 
+using Microsoft.Unity.VisualStudio.Editor;
 using UnityEngine;
 
 public class AirGaugeView : MonoBehaviour
 {
-    [SerializeField] private GameObject[] AirIcons;
+    [SerializeField] private UnityEngine.UI.Image[] AirIcons;
     
     // Start is called before the first frame update
     void Start()
     {
         foreach (var airIcon in AirIcons)
         {
-            airIcon.SetActive(false);
+            airIcon.fillAmount = 0;
         }
     }
 
@@ -18,7 +19,7 @@ public class AirGaugeView : MonoBehaviour
     {
         for (int i= 0; i < AirIcons.Length; i++)
         {
-            AirIcons[i].SetActive(i < value);
+            AirIcons[i].fillAmount = i < value ? 1 : 0;
         }
     }
 }

@@ -1,5 +1,6 @@
 using System;
 using Cinemachine;
+using DG.Tweening;
 using UniRx;
 using UnityEngine;
 
@@ -9,6 +10,9 @@ public class InGameDirector : MonoBehaviour
 
     [SerializeField] private GameObject playerPrefab;
     [SerializeField] private CinemachineVirtualCamera virtualCamera;
+
+    [SerializeField]
+    private Transform clearPanel;
     private Playercontrol currentPlayer;
     private bool isSetuped = false;
 
@@ -35,6 +39,8 @@ public class InGameDirector : MonoBehaviour
             .Subscribe(SetAirValue).AddTo(this);
 
         isSetuped = true;
+        
+        transform.DOMove(new Vector3(0, 0, 0f), 0.5f).SetEase(Ease.InSine);
     }
 
     private void SetAirValue(int value)
