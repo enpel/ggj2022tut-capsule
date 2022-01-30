@@ -56,6 +56,8 @@ public class Playercontrol : MonoBehaviour
     public bool Move;
     public bool Action;
 
+    public GameObject MascleGetEffect;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -73,6 +75,10 @@ public class Playercontrol : MonoBehaviour
         //ƒKƒŠEƒ€ƒL”»’è
         if(airGage>=1)
         {
+            if (!mascle)
+            {
+                Instantiate(MascleGetEffect, transform.position, transform.rotation, transform);
+            }
             mascle = true;
         }
         if(airGage<=0)

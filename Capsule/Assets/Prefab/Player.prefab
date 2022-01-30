@@ -350,6 +350,7 @@ MonoBehaviour:
   kapoeraTime: 0
   Move: 0
   Action: 0
+  MascleGetEffect: {fileID: 3323691738752651406, guid: 3518a916b219a5a42a512bac63370115, type: 3}
 --- !u!114 &4766045715635044733
 MonoBehaviour:
   m_ObjectHideFlags: 0

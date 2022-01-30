@@ -6,14 +6,17 @@ using UnityEngine.SceneManagement;
 public class GoalScript : MonoBehaviour
 {
     public GameObject ClearEffect;
+    private bool FlagEffect = true;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Player")
+        if (collision.gameObject.tag == "Player" && FlagEffect)
         {
             Instantiate(ClearEffect);
 
             Invoke("MoveToResult", 3);
+
+            FlagEffect = false;
         }
     }
 
