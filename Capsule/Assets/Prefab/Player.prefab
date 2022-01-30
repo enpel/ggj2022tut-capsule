@@ -209,7 +209,9 @@ GameObject:
   - component: {fileID: 4766045715635044720}
   - component: {fileID: 4766045715635044733}
   - component: {fileID: 4766045715635044722}
+  - component: {fileID: 6552988997461491273}
   - component: {fileID: 4766045715635044723}
+  - component: {fileID: 50796152305984611}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -239,6 +241,7 @@ Transform:
   - {fileID: 4766045716872502939}
   - {fileID: 6128188912038325098}
   - {fileID: 1738952479172784828}
+  - {fileID: 1715735631086644968}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -383,6 +386,23 @@ MonoBehaviour:
   inwater: 0
   flowStartTime: 0.25
   Time: 0
+--- !u!114 &6552988997461491273
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4766045715635044724}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ac9ebc74d29d2843bd9f9e97e97fe31, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startPos: {fileID: 5209666991943873089}
+  gariKapoeraEffect: {fileID: 1522591134320854926, guid: 043ac423b5474da4c9bda86366ca08fa, type: 3}
+  mukiKapoeraEffect: {fileID: 1212696084945327807, guid: a723b7c0ef5cb594c8afd37387febf3e, type: 3}
+  controller: {fileID: 4766045715635044720}
+  time: 0
 --- !u!50 &4766045715635044723
 Rigidbody2D:
   serializedVersion: 4
@@ -404,6 +424,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &50796152305984611
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4766045715635044724}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e6c51b9ab1fec348b15cb242584b99d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  control: {fileID: 4766045715635044720}
 --- !u!1 &4766045715716037940
 GameObject:
   m_ObjectHideFlags: 0
@@ -1168,6 +1201,37 @@ Transform:
   - {fileID: 4766045714993110770}
   m_Father: {fileID: 4766045715635044721}
   m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &5209666991943873089
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1715735631086644968}
+  m_Layer: 0
+  m_Name: EffectStart
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1715735631086644968
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5209666991943873089}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.018, y: 0.185, z: -0.35166276}
+  m_LocalScale: {x: 1.0000048, y: 0.7127075, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4766045715635044721}
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1084758492901084002
 PrefabInstance:
