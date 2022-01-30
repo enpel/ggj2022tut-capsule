@@ -15,4 +15,12 @@ public class VolumeSetting : MonoBehaviour
     {
         Global.SoundPlayer.SetVolume(MixerType.Master, newSliderValu);
     }
+    public void SoundSliderOnValueChangeBGM(float newSliderValu)
+    {
+        Global.SoundPlayer.SetVolume(MixerType.Bgm, newSliderValu);
+    }
+    public void SoundSliderOnValueChangeSE(float newSliderValu)
+    {
+        Global.SoundPlayer.SetVolume(MixerType.Se, newSliderValu);
+    }
 }
