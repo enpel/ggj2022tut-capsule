@@ -124,3 +124,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b869dd1daa07a5b43908682a720054d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ClearEffect: {fileID: 3975102019045172386, guid: 5d1c7add7cc0591488c781fd693dca4b, type: 3}
