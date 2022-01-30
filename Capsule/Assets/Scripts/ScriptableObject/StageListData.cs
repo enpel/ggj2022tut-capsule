@@ -1,7 +1,7 @@
 using ScriptableObject;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "StageData", menuName = "ゲームデータ/ステージデータ", order = 2)]
+[CreateAssetMenu(fileName = "StageListData", menuName = "ゲームデータ/ステージリスト", order = 2)]
 public class StageListData : UnityEngine.ScriptableObject
 {
     public StageData[] Stages;
