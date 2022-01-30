@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using Core.Global;
+using Sound;
 using UnityEngine;
 
 public class Playercontrol : MonoBehaviour
@@ -147,6 +149,7 @@ public class Playercontrol : MonoBehaviour
                     gameObject.transform.Translate( new Vector3(0f, 1f, 0f));
                     rigid.AddForce(new Vector2(0, mukiKapoeraJumpForce), ForceMode2D.Impulse);
                     Action = true;
+                    Global.SoundPlayer.PlaySE(SeType.MukiCapoeira);
                 }
                 else
                 {
@@ -156,6 +159,7 @@ public class Playercontrol : MonoBehaviour
                     {
                         rigid.AddForce(new Vector2(0, -gariKapoeraDiveForce), ForceMode2D.Impulse);
                     }
+                    Global.SoundPlayer.PlaySE(SeType.GariCapoeira);
                 }
             }
             else
@@ -173,6 +177,7 @@ public class Playercontrol : MonoBehaviour
                         rigid.AddForce(new Vector2(-punchForce, 0), ForceMode2D.Impulse);
                     }
                     punchTime = punchInitTime * 50;
+                    Global.SoundPlayer.PlaySE(SeType.MukiPunch);
 
                 }
                 else
@@ -186,6 +191,7 @@ public class Playercontrol : MonoBehaviour
                         gariPunchHandL.SetActive(true);
                     }
                     punchTime = punchInitTime * 50;
+                    Global.SoundPlayer.PlaySE(SeType.GariPunch);
                 }
             }
             

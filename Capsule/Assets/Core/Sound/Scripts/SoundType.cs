@@ -14,6 +14,7 @@ namespace Sound
         InGame,
         StageSelect,
         ResultClear,
+        PreInGame
     }
     
     public enum SeType

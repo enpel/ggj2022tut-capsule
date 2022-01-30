@@ -3844,8 +3844,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "# Team Capsule \r\n\r\nAttribution-NonCommercial-ShareAlike 4.0 International
-    (CC BY-NC-SA 4.0)\r\n\r\n# Using Resource\r\n## OtoLogic\r\nhttps://otologic.jp/\r\n##
+  m_text: "# Team Capsule \r\n\r\n## GariMukiYair!\nAttribution-NonCommercial-ShareAlike
+    4.0 International (CC BY-NC-SA 4.0)\r\n\r\n# Using Resource\r\n## OtoLogic\r\nhttps://otologic.jp/\r\n##
     \u9B54\u738B\u9B42\r\nhttps://maou.audio/\r\n## GoogleFont\r\nhttps://fonts.google.com/\r\nSIL
     Open Font License\r\n\r\n# Reference\r\n\r\n## SceneObject.cs\r\nhttps://gist.github.com/Hertzole/ac269f3148bc5192cc2eb6d472870d24\r\n\r\n#
     Packages\r\n\r\n\r\n### UniTask\r\nThe MIT License (MIT)\r\n\r\nCopyright (c)
@@ -3893,7 +3893,7 @@ MonoBehaviour:
     ARISING FROM,\r\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
     DEALINGS IN THE\r\nSOFTWARE."
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: b9c1b232d711b9a48b8e9d023508f94a, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -3957,7 +3957,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1550576356

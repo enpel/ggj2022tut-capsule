@@ -19,6 +19,10 @@ MonoBehaviour:
     m_Key: Language
     m_Metadata:
       m_Items: []
+  - m_Id: 101131008376832
+    m_Key: HowToPlay
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items:
     - rid: 1936772803865083911
@@ -39,5 +43,9 @@ MonoBehaviour:
           m_TableCodes:
           - en
           - ja
+        - m_KeyId: 101131008376832
+          m_TableCodes:
+          - ja
+          - en
         m_TypeString: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0,
           Culture=neutral, PublicKeyToken=null
