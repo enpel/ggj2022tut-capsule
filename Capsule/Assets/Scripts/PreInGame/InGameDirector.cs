@@ -1,7 +1,9 @@
 using Cinemachine;
 using Core.Global;
+using Core.PlayerInput;
 using Sound;
 using UniRx;
+using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -12,6 +14,8 @@ public class InGameDirector : MonoBehaviour
     [SerializeField] private GameObject playerPrefab;
     [SerializeField] private CinemachineVirtualCamera virtualCamera;
 
+    [SerializeField] private UIInputView uiInput;
+    
     private Playercontrol currentPlayer;
     private bool isSetuped = false;
 
@@ -31,6 +35,18 @@ public class InGameDirector : MonoBehaviour
         var startPoint = GameObject.Find("Start");
         currentPlayer = GameObject.Instantiate(playerPrefab, startPoint.transform.position, startPoint.transform.rotation).GetComponent<Playercontrol>();
         virtualCamera.Follow = currentPlayer.transform;
+
+        if (Application.platform == RuntimePlatform.Android)
+        {
+            currentPlayer.SetPlayerInput(uiInput);
+        }
+        else
+        {
+            uiInput.gameObject.SetActive(false);
+        }
+        
+        
+        
         Observable.EveryUpdate().Where(x => currentPlayer !=null)
             .Select(x => currentPlayer.airGage)
             .DistinctUntilChanged()

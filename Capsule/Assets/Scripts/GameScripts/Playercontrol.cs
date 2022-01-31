@@ -1,6 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using Core.Global;
+using Core.PlayerInput;
 using Sound;
 using UnityEngine;
 
@@ -58,6 +57,13 @@ public class Playercontrol : MonoBehaviour
 
     public GameObject MascleGetEffect;
 
+    private IPlayerInput playerInput = new StandardPlayerInput();
+
+    public void SetPlayerInput(IPlayerInput input)
+    {
+        playerInput = input;
+    }
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -100,7 +106,7 @@ public class Playercontrol : MonoBehaviour
         }
 
         //Move����
-        if(Input.GetKey(rightMoveKey))
+        if(playerInput.MoveDirection == 1)
         {
             Move = true;
             rightFront = true;
@@ -109,7 +115,7 @@ public class Playercontrol : MonoBehaviour
            // if (handStand == true)
                 //this.gameObject.transform.position -= transform.right * speed * Time.deltaTime;
         }
-        else if (Input.GetKey(leftMoveKey))
+        else if (playerInput.MoveDirection == -1)
         {
             Move = true;
             rightFront = false;
@@ -125,7 +131,7 @@ public class Playercontrol : MonoBehaviour
   
 
 
-        if(Input.GetMouseButtonDown(1))
+        if(playerInput.IsChangeStance)
         {
             if(handStand==true)
             {
@@ -137,7 +143,7 @@ public class Playercontrol : MonoBehaviour
             }
         }
         
-        if(Input.GetMouseButtonDown(0))
+        if(playerInput.IsAction)
         {
             airGage -= 1;
             Action = true;
